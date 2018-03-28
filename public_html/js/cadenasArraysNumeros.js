@@ -5,7 +5,8 @@ var semana = [ "Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", 
     convertirEnCadena,
     convertirEnArray,
     mensaje,
-    mensaje2;
+    mensaje2,
+    division;
     
 console.log(semana, meses, meses.length, semana[3]); 
 
@@ -61,7 +62,9 @@ console.log(mensaje);
 
 mensaje2 = mensaje.concat( ' }:)' );
 
-console.log(mensaje2, mensaje2.toLowerCase(), mensaje2.toUpperCase(),
+console.log(mensaje2, 
+mensaje2.toLowerCase(), 
+mensaje2.toUpperCase(),
 mensaje2.charAt( 5 ),
 mensaje2.indexOf( 'J' ), //Imprime la posición del primer carácter que encuentra
 mensaje2.indexOf( 'x' ), //Si no encuentra el caracter, devuelve -1
@@ -71,4 +74,22 @@ mensaje2.substring( 5, 15 ),
 mensaje2.substring( -5 ) //Si se le pasa un número negativo, devuelve la cadena entera
 );
 
+//division = 19/0;
+division = 19/3;
 
+console.log( 
+    division, 
+    isNaN(division)
+);
+
+if( isNaN(division) )
+{
+    alert( 'El valor de la variable NO es un número.' );
+}
+
+else
+{
+    alert( 'El valor de la variable SÍ es un número: ' + division );
+}
+
+console.log(division.toFixed(2));
