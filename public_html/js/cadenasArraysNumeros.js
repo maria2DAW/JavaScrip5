@@ -3,7 +3,9 @@ var semana = [ "Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", 
     "Agosto", "Septiembre", "Octubre", "Noviemnbre", "Diciembre" ),
     nuevoArray,        
     convertirEnCadena,
-    convertirEnArray;
+    convertirEnArray,
+    mensaje,
+    mensaje2;
     
 console.log(semana, meses, meses.length, semana[3]); 
 
@@ -48,4 +50,25 @@ console.log("Después de .join() " + convertirEnCadena, typeof convertirEnCadena
 convertirEnArray = convertirEnCadena.split('-');
 
 console.log("Después de .split() " + convertirEnArray, typeof convertirEnArray, convertirEnArray.length);
+
+mensaje = "Hola JavaScript";
+
+console.log(mensaje.length);
+
+mensaje += ', el lenguaje que dominará el mundo';
+
+console.log(mensaje);
+
+mensaje2 = mensaje.concat( ' }:)' );
+
+console.log(mensaje2, mensaje2.toLowerCase(), mensaje2.toUpperCase(),
+mensaje2.charAt( 5 ),
+mensaje2.indexOf( 'J' ), //Imprime la posición del primer carácter que encuentra
+mensaje2.indexOf( 'x' ), //Si no encuentra el caracter, devuelve -1
+mensaje2.lastIndexOf( 'a' ),
+mensaje2.substring( 5 ),
+mensaje2.substring( 5, 15 ),
+mensaje2.substring( -5 ) //Si se le pasa un número negativo, devuelve la cadena entera
+);
+
 
